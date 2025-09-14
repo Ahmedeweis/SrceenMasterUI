@@ -7,7 +7,7 @@
     <section class=" min-h-screen flex justify-center items-start ">
     <div class="w-full  bg-[#18122b] rounded-3xl overflow-hidden shadow-xl">
         <!-- Header -->
-    <BookingSteps title="Select Cinema" @back="$router.back()" :movie-title="movieTitle" />
+    <BookingSteps title="Select Cinema" @back="$router.back()" />
         <!-- Search -->
         <div class="px-6 mt-4">
             <div class="text-2xl  mb-3 font-extrabold text-transparent  text-white drop-shadow-md">
@@ -142,7 +142,6 @@
       </div>
 </template>
 <script setup>
-import { ref, onMounted } from "vue";
 // import Header from "../../../components/main/MainHeader.vue";
 import BookingSteps from "../../../components/main/BookingSteps.vue";
 import { useRoute, useRouter } from "vue-router"; // ✅ استورد useRouter
@@ -152,65 +151,30 @@ const movie = route.state?.movie || null; // safety
 const bg = movie?.backdropPath || "";
 const movieId = route.query.movieId;
 console.log("Selected movie ID:", movieId);
-const movieTitle = route.query.movieTitle;
-const theaters = ref({
-  near: [],
-  popular: [],
-  recommended: []
-});
 // ✅ بيانات السينمات مقسمة حسب القسم
-// const theaters = {
-//   near: [
-//     { id: 1, name: "CINEWORLD", img: "/img/Theater/1.png", distance: "2.4 Km", views: "8k" },
-//     { id: 2, name: "PALACE", img: "/img/Theater/2.png", distance: "6 Km", views: "6.2k" },
-//     { id: 3, name: "MEGAPLEX", img: "/img/Theater/3.png", distance: "3.2 Km", views: "5.5k" },
-//     { id: 4, name: "MOVIES", img: "/img/Theater/4.png", distance: "8 Km", views: "4.3k" },
-//   ],
-//   popular: [
-//     { id: 5, name: "CINEMA CITY", img: "/img/Theater/5.png", distance: "34 Km", views: "9k" },
-//     { id: 6, name: "SHOWCASE", img: "/img/Theater/6.png", distance: "20 Km", views: "7.5k" },
-//     { id: 7, name: "IMAX", img: "/img/Theater/7.png", distance: "12 Km", views: "5.8k" },
-//     { id: 8, name: "GRAND", img: "/img/Theater/8.png", distance: "14 Km", views: "6k" },
-//   ],
-//   recommended: [
-//     { id: 9, name: "CINEMA MAX", img: "/img/Theater/1.png", distance: "15 Km", views: "7.5k" },
-//     { id: 10, name: "FRIEND'S PICK", img: "/img/Theater/2.png", distance: "9 Km", views: "6.9k" },
-//   ],
-// };
+const theaters = {
+  near: [
+    { id: 1, name: "CINEWORLD", img: "/img/Theater/1.png", distance: "2.4 Km", views: "8k" },
+    { id: 2, name: "PALACE", img: "/img/Theater/2.png", distance: "6 Km", views: "6.2k" },
+    { id: 3, name: "MEGAPLEX", img: "/img/Theater/3.png", distance: "3.2 Km", views: "5.5k" },
+    { id: 4, name: "MOVIES", img: "/img/Theater/4.png", distance: "8 Km", views: "4.3k" },
+  ],
+  popular: [
+    { id: 5, name: "CINEMA CITY", img: "/img/Theater/5.png", distance: "34 Km", views: "9k" },
+    { id: 6, name: "SHOWCASE", img: "/img/Theater/6.png", distance: "20 Km", views: "7.5k" },
+    { id: 7, name: "IMAX", img: "/img/Theater/7.png", distance: "12 Km", views: "5.8k" },
+    { id: 8, name: "GRAND", img: "/img/Theater/8.png", distance: "14 Km", views: "6k" },
+  ],
+  recommended: [
+    { id: 9, name: "CINEMA MAX", img: "/img/Theater/1.png", distance: "15 Km", views: "7.5k" },
+    { id: 10, name: "FRIEND'S PICK", img: "/img/Theater/2.png", distance: "9 Km", views: "6.9k" },
+  ],
+};
 // ✅ لما يضغط على سينما يروح يختار الكراسي
-// تابع الذهاب لاختيار الكراسي
 const goToSeats = (theater) => {
-  router.push({
-    path: "/chooseChair",
-    query: {
-      theaterId: theater.id,
-      movieId: movieId,
-      movieTitle: movieTitle
-    },
-  });
-};
-import TheaterService from '../../../services/Theater.js';
-import { theaterStats} from '../../../services/theaterStats.js';
-const fetchTheaters = async () => {
-  try {
-    const response = await TheaterService.getTheaters();
-    const apiData = response.data; // مصفوفة السينمات
-    // دمج الصور الثابتة و likes/distance
-    const enhancedTheaters = apiData.map((theater, index) => ({
-      ...theater,
-      img: `/img/Theater/${(index % 7) + 1}.png`, // صور عشوائية 1-7
-      views: theaterStats[index]?.likes ? `${theaterStats[index].likes}k` : "0",
-      distance: theaterStats[index]?.distance ? `${theaterStats[index].distance} Km` : "0"
-    }));
-    // تقسيمهم للأقسام (كل 3 سينمات في صف)
-    theaters.value.near = enhancedTheaters.slice(0, 4);
-    theaters.value.popular = enhancedTheaters.slice(4, 8);
-    theaters.value.recommended = enhancedTheaters.slice(8, 12);
-  } catch (error) {
-    console.error('Error fetching theaters:', error);
-  }
-};
-onMounted(() => {
-  fetchTheaters();
+router.push({
+  path: "/chooseChair",
+  query: { theaterId: theater.id },
 });
+};
 </script>

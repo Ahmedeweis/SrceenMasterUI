@@ -30,7 +30,7 @@
 </div>
     </div>
    <div class=" w-1/5 text-lg font-bold text-purple-400">
-   Movie Name : <span class="text-white">{{ Avatar }}</span>
+   Movie Name : <span class="text-white">{{ movieTitle || "Movie" }}</span>
 </div>
   </div>
 </template>
@@ -39,6 +39,7 @@ import { ref, computed } from "vue"
 import { useRoute } from "vue-router"
 const route = useRoute()
 const props = defineProps({
+    movieTitle: String,
   title: {
     type: String,
     default: "Select Cinema",

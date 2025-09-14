@@ -33,6 +33,7 @@ const menuItems = [
   { name: 'screens', label: 'Screens', path: '/screen', icon: '/img/cinemaa.png' },
   { name: 'seats', label: 'Seats', path: '/seats/1', icon: '/img/chair.png' },
   { name: 'movies', label: 'Movies', path: '/movies', icon: '/img/movie.png' },
+    { name: 'Fill DB', label: 'DB', path: '/FillDatabase', icon: '/img/movie.png' },
 ]
 </script>
 <style scoped>

@@ -12,10 +12,10 @@
       <Header />
 <div>
         <section
-        class="w-full max-w-4xl md:max-w-6xl mx-auto rounded-3xl  shadow-lg flex flex-col-reverse md:flex-row md:items-start"
+        class="w-full max-w-4xl md:max-w-6xl mx-auto rounded-3xl mt-10  shadow-lg flex  flex-col-reverse md:flex-row md:items-start"
       >
 <!-- Text Section -->
-<div class="w-full md:w-1/2 p-8 flex flex-col justify-center text-white space-y-6" style="height: 600px;">
+<div class="w-full md:w-1/2 p-8 flex flex-col justify-center text-white space-y-6 mt-4 " style="height: 600px;">
   <!-- Title -->
   <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight">
     {{ movie.title }}
@@ -171,7 +171,17 @@ const movie = ref(null);
 const BASE_IMG_URL = "https://image.tmdb.org/t/p/original";
 import posterImg from "../assets/imgs/poster.png";
 const goToChooseCinema = () => {
-  router.push('/chooseCinma'); // هنا تحط اسم الصفحة أو المسار الصحيح
+  if (movie.value?.id) {
+    router.push({
+      path: '/chooseCinma',
+      query: {
+        movieId: movie.value.id,
+        movieTitle: movie.value.title // اسم الفيلم
+      }
+    });
+  } else {
+    console.error("❌ Movie ID is missing!");
+  }
 };
 // استرجاع الكائن من query
 if (route.query.movie) {

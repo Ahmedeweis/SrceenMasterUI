@@ -67,6 +67,20 @@ const routes = [
     component: () => import("../views/DashBoard/seats.vue"),
     props: true, // عشان تستقبل الـ id كـ prop
   },
+  {
+  path: '/screens/:id/showtimes',
+  name: 'ShowTimes',
+  component: () => import('../views/DashBoard/ShowTimes.vue'),
+  props: true
+  },
+      { path: "/FillDatabase",
+    name: "FillDatabase",
+    component: () => import("../views/FillDatabase.vue")
+  },
+        { path: "/Bookings",
+    name: "Bookings",
+    component: () => import("../views/users/Bookings.vue")
+  },
 ];
 const router = createRouter({
   history: createWebHistory(),

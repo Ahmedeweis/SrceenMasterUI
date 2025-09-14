@@ -357,7 +357,7 @@ back  row
 </template>
 <script setup>
 import dayjs from "dayjs";
-import { ref, onMounted, computed, watch } from "vue";
+import { ref, onMounted, computed, watch , watchEffect} from "vue";
 import BookingSteps from "../../../components/main/BookingSteps.vue";
 import { useRoute, useRouter } from "vue-router";
 import { getShowtimesByMovie } from "../../../services/showtime";
@@ -429,12 +429,11 @@ const fetchShowtimes = async () => {
     const response = await getShowtimesByMovie(movieId);
     allShowtimes.value = response.data; // النسخة الكاملة
     // النسخة المبسطة
-smallAllShowtimes.value = allShowtimes.value.map(s => ({
-  id: s.id,
-  showTime: s.showTime,
-  showDate: s.showDate,
-  screenId: s.screen?.id || null   // نجيب الـ ID من الـ screen، لو موجود
-}));
+    smallAllShowtimes.value = allShowtimes.value.map(s => ({
+      id: s.id,
+      showTime: s.showTime,
+      showDate: s.showDate
+    }));
 console.log(smallAllShowtimes.value);
     if (allShowtimes.value.length > 0) {
       selectedDate.value = allShowtimes.value[0].showDate;
@@ -525,24 +524,8 @@ const goToSeats = () => {
     },
   });
 };
-// دالة عند الضغط على الزر
-const goToFood = async () => {
-  try {
-    const bookingData = {
-      userId: userId.value,              // مهم جداً
-      seatIds: seatIds.value,
-      showtimeId: selectedShowId.value   // لو الـ API بيستخدم showtimeId
-    };
-    const response = await createBooking(bookingData);
-    console.log("Booking successful:", response.data);
-    // router.push('/food') لو حابب تعمل redirect
-  } catch (error) {
-    if (error.response?.data?.validationErrors) {
-      console.error("Validation errors:", error.response.data.validationErrors);
-    } else {
-      console.error("Booking failed:", error);
-    }
-  }
+const goToFood = () => {
+  router.push("/chooseFood");
 };
 // ===== Mounted =====
 onMounted(() => {
@@ -568,56 +551,6 @@ const simplifyShowtimes = (showtimes) => {
     showDate: s.showDate
   }));
 };
-const selectedShowId = ref(null);
-const selectedScreenId = ref(null);
-const updateSelectedShowId = () => {
-  const show = smallAllShowtimes.value.find(s =>
-    s.showDate === selectedDate.value && s.showTime === selectedTime.value
-  );
-  selectedShowId.value = show ? show.id : null;
-  selectedScreenId.value = show ? show.screenId : null;
-  console.log("Selected Show ID:", selectedShowId.value);
-  console.log("Selected Screen ID:", selectedScreenId.value);
-};
-watch([selectedDate, selectedTime], () => {
-  updateSelectedShowId();
-});
-const userId = ref(205)
-console.log(userId.value)
-import { getSeatsByScreenId } from "../../../services/seats.js"
-const screenSeats = ref([]); // هانخزن هنا الـ seats
-const fetchSeats = async (screenId) => {
-  if (!screenId) return;
-  try {
-    const response = await getSeatsByScreenId(screenId);
-    screenSeats.value = response.data; // حسب الـ API
-    console.log("Seats for screen:", screenSeats.value);
-  } catch (error) {
-    console.error("Error fetching seats:", error);
-    screenSeats.value = [];
-  }
-};
-// watcher على selectedScreenId عشان يجيب الـ seats تلقائي لما يتغير
-watch(selectedScreenId, (newScreenId) => {
-  if (newScreenId) {
-    fetchSeats(newScreenId);
-  }
-});
-// هذا computed يجيبلك الـ seatIds مباشرة
-const seatIds = computed(() => {
-  return clickedSeats.value
-    .map(seat => {
-      const row = seat[0]; // أول حرف هو الـ row
-      const number = parseInt(seat.slice(1)); // الباقي هو رقم الكرسي
-      const found = screenSeats.value.find(
-        s => s.rowNumber === row && s.seatNumber === number
-      );
-      return found ? found.id : null;
-    })
-    .filter(id => id !== null); // نتخلص من أي seat مش موجودة
-});
-console.log(seatIds.value);
-import { createBooking } from "../../../services/booking";
 </script>
 <style>
 .no-scrollbar::-webkit-scrollbar {

@@ -18,3 +18,7 @@ export const addSeatType = (seatTypeData) => {
 export const deleteSeatType = (seatTypeId) => {
   return api.delete(`/theater/delete-seat-type/${seatTypeId}`);
 };
+// إضافة مقعد جديد
+export const addSeat = (seatData) => {
+  return api.post("/theater/add-seat", seatData);
+};

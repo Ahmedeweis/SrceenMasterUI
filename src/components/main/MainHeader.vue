@@ -11,10 +11,10 @@
              transition-transform duration-300 hover:scale-110 hover:shadow-lg"
     />
     <div>
-      <h1 class="text-lg font-semibold bg-clip-text text-transparent
+      <router-link to="/Bookings" class="text-lg font-semibold bg-clip-text text-transparent
                  bg-gradient-to-r from-purple-400 to-pink-500">
         Hi Reza
-      </h1>
+      </router-link>
       <p class="text-sm text-gray-400">Good Evening</p>
     </div>
   </div>
@@ -54,7 +54,7 @@
         <img src="../../assets/imgs/inbox-.png" alt="inbox" class="w-5 h-5" />
       </button>
       <!-- Ping badge -->
-      <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full animate-ping"></span>
+      <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full animate-ping">  {{ movieTitle || "Hi Reza" }}</span>
     </div>
   </div>
 </header>

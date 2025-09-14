@@ -10,16 +10,25 @@
     <!-- Screen Info (نقلناها فوق الكراسي) -->
 <div class="flex justify-start mb-8 w-full">
   <div v-if="screen" class="bg-white rounded-2xl shadow-lg p-6 w-full ">
-    <!-- Header -->
-    <div class="flex items-center justify-between mb-4">
-      <h2 class="text-2xl font-bold text-gray-800">{{ screen.name }}</h2>
-      <span
-        class="px-3 py-1 rounded-full text-sm font-semibold"
-        :class="screen._active ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'"
-      >
-        {{ screen._active ? 'Active' : 'Inactive' }}
-      </span>
-    </div>
+<!-- Header -->
+<div class="flex items-center justify-between mb-4">
+  <h2 class="text-2xl font-bold text-gray-800">{{ screen.name }}</h2>
+  <div class="flex items-center gap-3">
+    <!-- زرار Show Times -->
+    <router-link
+      :to="`/screens/${screen.id}/showtimes`"
+      class="px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition cursor-pointer"
+    >
+      Show Times
+    </router-link>
+    <span
+      class="px-3 py-1 rounded-full text-sm font-semibold"
+      :class="screen._active ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'"
+    >
+      {{ screen._active ? 'Active' : 'Inactive' }}
+    </span>
+  </div>
+</div>
     <!-- Details Grid -->
     <div class="flex justify-between gap-4">
             <div class="flex items-center gap-2">
