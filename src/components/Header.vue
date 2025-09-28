@@ -13,16 +13,24 @@
       >
     </div>
     <div class="flex space-x-4">
-      <button class="p-2 text-gray-500 hover:text-gray-700">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M5 4a1 1 0 00-1 1v10a1 1 0 001 1h10a1 1 0 001-1V5a1 1 0 00-1-1H5zm-1 1h12v10H4V5z"/>
+    <button
+        class="flex items-center gap-2  rounded-full border border-[#DDDFF0] bg-white px-5 py-2 text-lg cursor-pointer font-bold text-gray-800 shadow-sm hover:bg-gray-100">
+        <!-- Filter Icon Placeholder -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-700" fill="none" viewBox="0 0 24 24"
+            stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 4h18M6 12h12M10 20h4" />
         </svg>
+        Filter
+    </button>
+      <button class=" flex items-center gap-2  rounded-full border border-[#DDDFF0] bg-white px-3 py-2 text-lg cursor-pointer font-bold text-gray-800 shadow-sm hover:bg-gray-100">
+        <span class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <img  class="w-5 h-5" src="../assets/imgs/AdminHeader/menu.png"></img>
+        </span>
       </button>
-      <button class="p-2 text-gray-500 hover:text-gray-700">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-          <path d="M2 6a2 2 0 012-2h12a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm2-1a1 1 0 00-1 1v8a1 1 0 001 1h12a1 1 0 001-1V6a1 1 0 00-1-1H4z"/>
-        </svg>
+            <button class=" flex items-center gap-2  rounded-full border border-[#DDDFF0] bg-white px-3 py-2 text-lg cursor-pointer font-bold text-gray-800 shadow-sm hover:bg-gray-100">
+        <span class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+          <img  class="w-5 h-5" src="../assets/imgs/AdminHeader/view.png"></img>
+        </span>
       </button>
     </div>
   </header>

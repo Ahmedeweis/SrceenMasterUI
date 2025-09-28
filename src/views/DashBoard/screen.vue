@@ -161,7 +161,7 @@ import { ref, onMounted,computed } from "vue";
 import Sidebar from "../../components/Sidebar.vue";
 import Header from "../../components/Header.vue";
 import AddScreenModal from "../../components/Screens/AddScreen.vue";
-import ScreenService from "../../services/Screen.js";
+import ScreenService from "../../services/screen.js";
 import TheaterService from "../../services/Theater.js";
 import Swal from "sweetalert2";
 const theaters = ref([]);

@@ -200,7 +200,14 @@ const fetchAllShowtimes = async () => {
   }
 };
 onMounted(async () => {
-  const res = await getMovies({ page: 0, size: 5, adult: false });
+  const res = await getMovies({
+    page: 0,
+    size: 15,
+    adult: false,
+    sort: [
+      { field: "popularity", direction: "desc" }
+    ]
+  });
   movies.value = res.content || res;
   await fetchAllShowtimes();
 });

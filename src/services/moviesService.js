@@ -3,7 +3,7 @@ import api from "./axios";
 export const getMovies = async (filters = {}) => {
   const {
     page = 0,
-    size = 10,
+    size = 20,
     title = "",
     overview = "",
     adult = false,

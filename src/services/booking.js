@@ -6,3 +6,7 @@ export const createBooking = (bookingData) => {
 export const getBookingsByUser = (userId) => {
   return api.get(`/bookings/user/${userId}`);
 };
+// 🆕 دالة لحذف حجز حسب ID
+export const deleteBooking = (bookingId) => {
+  return api.delete(`/bookings/${bookingId}`);
+};

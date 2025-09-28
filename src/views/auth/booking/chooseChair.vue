@@ -362,6 +362,8 @@ import BookingSteps from "../../../components/main/BookingSteps.vue";
 import { useRoute, useRouter } from "vue-router";
 import { getShowtimesByMovie } from "../../../services/showtime";
 import TheaterService from '../../../services/Theater.js';
+import { useToast } from 'vue-toastification';
+const toast = useToast();
 // ===== Router & Query =====
 const route = useRoute();
 const router = useRouter();
@@ -534,7 +536,13 @@ const goToFood = async () => {
       showtimeId: selectedShowId.value   // لو الـ API بيستخدم showtimeId
     };
     const response = await createBooking(bookingData);
-    console.log("Booking successful:", response.data);
+    if (response.status === 201) {
+      toast.success('Booking successful!');
+      // Redirect after a small delay to let the user see the toast
+      setTimeout(() => {
+        router.push('/Bookings');
+      }, 2000);
+    }
     // router.push('/food') لو حابب تعمل redirect
   } catch (error) {
     if (error.response?.data?.validationErrors) {

@@ -127,28 +127,28 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 font-bold">
     <div class="rounded-xl overflow-hidden shadow-lg">
       <img
-        src="../assets/imgs/movie/5.png"
+        src="../assets/imgs/movie/5.webp"
         alt="Shot 1"
     class="w-full h-full object-cover img-hover cursor-pointer"
       />
     </div>
     <div class="rounded-xl overflow-hidden shadow-lg">
       <img
-       src="../assets/imgs/movie/4.png"
+       src="../assets/imgs/movie/4.webp"
         alt="Shot 2"
          class="w-full h-full object-cover img-hover cursor-pointer"
       />
     </div>
     <div class="rounded-xl overflow-hidden shadow-lg">
       <img
-      src="../assets/imgs/movie/6.png"
+      src="../assets/imgs/movie/6.webp"
         alt="Shot 3"
     class="w-full h-full object-cover img-hover cursor-pointer"
       />
     </div>
 <div class="rounded-xl overflow-hidden shadow-lg">
   <img
-    src="../assets/imgs/movie/2.png"
+    src="../assets/imgs/movie/2.webp"
     alt="Shot 4"
     class="w-full h-full object-cover img-hover cursor-pointer"
   />
@@ -161,7 +161,7 @@
 </template>
 <script setup>
 import Header from "../components/main/MainHeader.vue";
-import bg from "../assets/imgs/back.png";
+import bg from "../assets/imgs/back.webp";
 import { useRoute } from "vue-router";
 import { useRouter } from 'vue-router'
 const router = useRouter()

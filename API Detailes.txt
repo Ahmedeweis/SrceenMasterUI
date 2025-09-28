@@ -1,5 +1,5 @@
 صورة ال Theater 
-
+تترفع مع post add Theater
 ---------------------------
 عني السيرفر عندك متوقع إن الـ screenType ييجي واحد من القيم دي فقط:
 Rear_Projection
@@ -7,6 +7,9 @@ Screen_3D
 Front_Screen
 لكن إنت في الـ <select> بعتله "IMAX" و "3D"، ودي مش موجودة في الـ Enum بتاع السيرفر
 عني انا حاططهم ستاتيك لو حبيت تضيف 3D و IMAX
+API يرجع ال 3 دول
 ---------------------------------------
 
 API Get Show Time By Screen Id
+
+Get Screen By Id

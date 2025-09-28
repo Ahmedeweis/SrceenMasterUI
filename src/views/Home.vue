@@ -42,7 +42,7 @@
     <div class="space-y-4">
       <!-- Big main card -->
       <div class="relative rounded-xl overflow-hidden shadow-lg h-[200px] sm:h-[220px]">
-        <img src="../assets/imgs/movie/big.png" alt="Arcane" class="w-full h-full object-cover rounded-xl">
+        <img src="../assets/imgs/movie/big.webp" alt="Arcane" class="w-full h-full object-cover rounded-xl">
         <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl"></div>
         <div class="absolute bottom-3 left-3 flex items-center gap-2">
           <button class="w-8 h-8 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full hover:bg-white/30 transition cursor-pointer">
@@ -55,7 +55,7 @@
       <div class="grid grid-cols-2 gap-3">
         <!-- Joker Card -->
         <div class="relative rounded-xl overflow-hidden shadow-lg h-[100px] sm:h-[250px]">
-          <img src="../assets/imgs/movie/left.png" alt="Joker" class="w-full h-full object-cover rounded-xl">
+          <img src="../assets/imgs/movie/left.webp" alt="Joker" class="w-full h-full object-cover rounded-xl">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl"></div>
           <button class="absolute top-5 left-5 w-10 h-10 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full hover:bg-white/30 transition cursor-pointer">
             <img src="../assets/imgs/play-button.png" class="w-4 h-4">
@@ -66,7 +66,7 @@
         </div>
         <!-- Bohemian Rhapsody Card -->
         <div class="relative rounded-xl overflow-hidden shadow-lg h-[100px] sm:h-[250px]">
-          <img src="../assets/imgs/movie/right.png" alt="Bohemian Rhapsody" class="w-full h-full object-cover rounded-xl">
+          <img src="../assets/imgs/movie/right.webp" alt="Bohemian Rhapsody" class="w-full h-full object-cover rounded-xl">
           <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl"></div>
           <button class="absolute top-5 right-5 w-10 h-10 flex items-center justify-center bg-white/20 backdrop-blur-md rounded-full hover:bg-white/30 transition cursor-pointer">
             <img src="../assets/imgs/play-button.png" class="w-4 h-4">
@@ -78,7 +78,7 @@
       </div>
     </div>
         <div class="relative rounded-xl overflow-hidden shadow-lg h-[400px] lg:h-full">
-      <img src="../assets/imgs/movie/3.png" alt="Featured Trailer" class="w-full h-full object-cover rounded-xl">
+      <img src="../assets/imgs/movie/3.webp" alt="Featured Trailer" class="w-full h-full object-cover rounded-xl">
       <!-- Gradient overlay -->
       <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl"></div>
       <!-- Play button & title -->
@@ -227,11 +227,11 @@ import Header from "../components/main/MainHeader.vue";
 import { getMovies } from "../services/moviesService";
 import { useRouter } from "vue-router";
 const router = useRouter();
-import img1 from "../assets/imgs/slider/1.png";
-import img2 from "../assets/imgs/slider/2.png";
-import img3 from "../assets/imgs/slider/3.png";
-import img4 from "../assets/imgs/slider/4.png";
-import img5 from "../assets/imgs/slider/5.png";
+import img1 from "../assets/imgs/slider/1.webp";
+import img2 from "../assets/imgs/slider/2.webp";
+import img3 from "../assets/imgs/slider/3.webp";
+import img4 from "../assets/imgs/slider/4.webp";
+import img5 from "../assets/imgs/slider/5.webp";
 // سلايدر
 const slides = ref([img1, img2, img3, img4, img5]);
 const currentIndex = ref(0);
@@ -247,7 +247,7 @@ const movies = ref([]);
 const loading = ref(false);
 const filters = reactive({
   page: 0,
-  size: 10, // عدد الأفلام
+  size: 15, // عدد الأفلام
   title: "",
   overview: "",
   adult: false,
