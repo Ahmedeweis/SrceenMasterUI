@@ -108,7 +108,7 @@
 </template>
 <script setup>
 import { ref } from "vue";
-import bg from "../../assets/imgs/ballerina.png";
+import bg from "../../assets/imgs/ballerina.webp";
 import eye from "../../assets/imgs/eye.png";
 import eyeOff from "../../assets/imgs/hide.png";
 import { useToast } from "vue-toastification";
