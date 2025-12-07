@@ -65,14 +65,14 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { useRouter, useRoute } from 'vue-router'
-import bg from "../../assets/imgs/ballerina.png";
+import bg from "../../assets/imgs/ballerina.webp";
 import { verifyOTP, resendOTP } from '../../services/authService';
 import { useToast } from "vue-toastification"
 const router = useRouter()
 const route = useRoute()
 const toast = useToast()
 // جاي من signup
-const email = route.query.email || ''
+const email = route.query.email || 'Ahmed.eweiis@gmail.com'
 // الحقول بتاعة الكود
 const code = ref(['', '', '', '', '', ''])
 // نجمع الكود
