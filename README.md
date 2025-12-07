@@ -15,30 +15,30 @@
 Below are some screenshots showcasing ScreenMasterUI features.
 
 ### Home & Booking Flow
-![1](screenshots/1.webp)
-![2](screenshots/2.webp)
-![3](screenshots/3.webp)
-![4](screenshots/4.webp)
-![5](screenshots/5.webp)
+![1](https://srceenmaster.vercel.app/screenshots/1.webp)
+![2](https://srceenmaster.vercel.app/screenshots/2.webp)
+![3](https://srceenmaster.vercel.app/screenshots/3.webp)
+![4](https://srceenmaster.vercel.app/screenshots/4.webp)
+![5](https://srceenmaster.vercel.app/screenshots/5.webp)
 
 ### Movie Details & Seat Selection
-![6](screenshots/6.webp)
-![7](screenshots/7.webp)
-![8](screenshots/8.webp)
-![9](screenshots/9.webp)
-![10](screenshots/10.webp)
+![6](https://srceenmaster.vercel.app/screenshots/6.webp)
+![7](https://srceenmaster.vercel.app/screenshots/7.webp)
+![8](https://srceenmaster.vercel.app/screenshots/8.webp)
+![9](https://srceenmaster.vercel.app/screenshots/9.webp)
+![10](https://srceenmaster.vercel.app/screenshots/10.webp)
 
 ### Admin Dashboard
-![11](screenshots/11.webp)
-![12](screenshots/12.webp)
-![13](screenshots/13.webp)
-![14](screenshots/14.webp)
-![15](screenshots/15.webp)
+![11](https://srceenmaster.vercel.app/screenshots/11.webp)
+![12](https://srceenmaster.vercel.app/screenshots/12.webp)
+![13](https://srceenmaster.vercel.app/screenshots/13.webp)
+![14](https://srceenmaster.vercel.app/screenshots/14.webp)
+![15](https://srceenmaster.vercel.app/screenshots/15.webp)
 
 ### Reports & Misc
-![16](screenshots/16.webp)
-![17](screenshots/17.webp)
-![18](screenshots/18.webp)
+![16](https://srceenmaster.vercel.app/screenshots/16.webp)
+![17](https://srceenmaster.vercel.app/screenshots/17.webp)
+![18](https://srceenmaster.vercel.app/screenshots/18.webp)
 
 ## 🚀 Features
 
