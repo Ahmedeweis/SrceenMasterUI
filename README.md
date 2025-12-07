@@ -20,22 +20,16 @@ Below are some screenshots showcasing ScreenMasterUI features.
 ![3](https://srceenmaster.vercel.app/screenshots/3.webp)
 ![4](https://srceenmaster.vercel.app/screenshots/4.webp)
 ![5](https://srceenmaster.vercel.app/screenshots/5.webp)
-
-### Movie Details & Seat Selection
 ![6](https://srceenmaster.vercel.app/screenshots/6.webp)
 ![7](https://srceenmaster.vercel.app/screenshots/7.webp)
 ![8](https://srceenmaster.vercel.app/screenshots/8.webp)
 ![9](https://srceenmaster.vercel.app/screenshots/9.webp)
 ![10](https://srceenmaster.vercel.app/screenshots/10.webp)
-
-### Admin Dashboard
 ![11](https://srceenmaster.vercel.app/screenshots/11.webp)
 ![12](https://srceenmaster.vercel.app/screenshots/12.webp)
 ![13](https://srceenmaster.vercel.app/screenshots/13.webp)
 ![14](https://srceenmaster.vercel.app/screenshots/14.webp)
 ![15](https://srceenmaster.vercel.app/screenshots/15.webp)
-
-### Reports & Misc
 ![16](https://srceenmaster.vercel.app/screenshots/16.webp)
 ![17](https://srceenmaster.vercel.app/screenshots/17.webp)
 ![18](https://srceenmaster.vercel.app/screenshots/18.webp)
