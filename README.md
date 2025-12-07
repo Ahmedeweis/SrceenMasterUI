@@ -10,6 +10,36 @@
 
 **ScreenMasterUI** is a modern, full-featured cinema ticket booking application. It provides a seamless experience for users to browse movies, select theaters, choose seats interactively, pre-order food, and securely book tickets. It also includes a comprehensive Admin Dashboard for managing cinema operations.
 
+## 📸 Project Screenshots
+
+Below are some screenshots showcasing ScreenMasterUI features.
+
+### Home & Booking Flow
+![1](screenshots/1.webp)
+![2](screenshots/2.webp)
+![3](screenshots/3.webp)
+![4](screenshots/4.webp)
+![5](screenshots/5.webp)
+
+### Movie Details & Seat Selection
+![6](screenshots/6.webp)
+![7](screenshots/7.webp)
+![8](screenshots/8.webp)
+![9](screenshots/9.webp)
+![10](screenshots/10.webp)
+
+### Admin Dashboard
+![11](screenshots/11.webp)
+![12](screenshots/12.webp)
+![13](screenshots/13.webp)
+![14](screenshots/14.webp)
+![15](screenshots/15.webp)
+
+### Reports & Misc
+![16](screenshots/16.webp)
+![17](screenshots/17.webp)
+![18](screenshots/18.webp)
+
 ## 🚀 Features
 
 ### 👤 User Portal
