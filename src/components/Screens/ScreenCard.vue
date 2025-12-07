@@ -29,7 +29,7 @@
   </div>
 </template>
 <script setup>
-import ScreenService from "../../services/Screen.js";
+import ScreenService from "../../services/screenService";
 import Swal from "sweetalert2";
 const props = defineProps({
   screen: { type: Object, required: true },

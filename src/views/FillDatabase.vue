@@ -24,7 +24,7 @@
 <script setup>
 import { ref } from "vue";
 import TheaterService from "../services/Theater.js";
-import ScreenService from "../services/Screen.js";
+import ScreenService from "../services/screen.js";
 import { addSeat } from "../services/seats.js";
 import { addShowtime } from "../services/showtime.js";
 const statusMessage = ref("");

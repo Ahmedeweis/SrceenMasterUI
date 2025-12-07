@@ -107,7 +107,7 @@
 </template>
 <script setup>
 import { ref ,onMounted} from "vue";
-import ScreenService from "../../services/Screen.js";
+import ScreenService from "../../services/screen.js";
 import { useToast } from "vue-toastification";
 const emit = defineEmits(["screenAdded"]);
 const toast = useToast();
