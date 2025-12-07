@@ -1,6 +1,6 @@
 # 🎬 ScreenMasterUI - Cinema Booking System
 
-![Project Banner](https://falcon-core.vercel.app/imgs/gallery-31.png)
+<!-- ![Project Banner](https://falcon-core.vercel.app/imgs/gallery-31.png) -->
 ![Project Banner](https://srceenmaster.vercel.app/gallery-31.png)
 ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
